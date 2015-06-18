@@ -1,0 +1,200 @@
+.formattedContent{
+	@include clear();
+	
+	& > *:first-child{
+		margin-top: 0 !important;
+	}
+	
+	& > *:last-child{
+		margin-bottom: 0 !important;
+	}
+	
+	h1{
+		font-size: 24px;
+		font-size: 2.4rem;
+		position: relative;
+		padding: 1px 0 5px 40px;
+		margin-bottom: 10px;
+		
+		span{
+			position: relative;
+			z-index: 3;
+			@include bg(#fdfdfd);
+			padding-right: 12px;
+		}
+		
+		&:before{
+			content: '';
+			@include abs(0, 0);
+			width: 36px;
+			height: 32px;
+			@include bg('jewel.png');
+		}
+		
+		&:after{
+			content: '';
+			@include absR(0, 16px);
+			z-index: 2;
+			width: 80%;
+			height: 2px;
+			@include bg('dots.png', 100% 0, repeat-x);
+		}
+	}
+	
+	h2{
+		font-size: 20px;
+		font-size: 2rem;
+		margin: 50px 0 30px;
+	}
+	
+	h3{
+		font-size: 18px;
+		font-size: 1.8rem;
+		margin: 40px 0 30px;
+	}
+	
+	p{
+		font-size: 16px;
+		font-size: 1.6rem;
+		line-height: 1.5625;
+		margin: 1.5625em 0;
+		
+		&.strong{
+			font-weight: 700;
+		}
+		
+		&.small{
+			font-size: 12px;
+			font-size: 1.2rem;
+			font-style: italic;
+		}
+		
+		a{
+			text-decoration: underline;
+			
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	
+	figure{
+		margin: 25px 0;
+		@include clear();
+		
+		img{
+			max-width: 100%;
+			display: block;
+			float: left;
+			margin-right: 19px;
+		}
+		
+		&.left,
+		&.right{
+			max-width: 50%;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			
+			img{
+				float: none;
+				margin: 0;
+			}
+		}
+		
+		&.left{
+			float: left;
+			margin-right: 5%;
+		}
+		
+		&.right{
+			float: right;
+			margin-left: 5%;
+		}
+	}
+	
+	/*
+	table{
+		width: 100%;
+		margin: 30px 0;
+
+		th,
+		td{
+			.text(19; 22 / 19; @black; left);
+			padding: 11px 16px;
+			.bg(@lightyellow);
+			
+			&.right{
+				.text(right);
+			}
+		}
+
+		thead{
+
+			td,
+			th{
+				.bg(@yellow) !important;
+			}
+		}
+		
+		tr{
+			
+			&:nth-child(2n + 1){
+				
+				td,
+				th{
+					.bg(@lines);
+				}
+			}
+		}
+	}
+	*/
+	ol,
+	ul{
+		margin: 25px 0;
+		
+		li{
+			font-size: 16px;
+			font-size: 1.6rem;
+			line-height: 1.5625;
+			
+			&:first-child{
+				margin-top: 0;
+			}
+			
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	ul{
+		margin-left: 25px;
+		
+		li{
+			list-style: disc;
+			padding-left: 5px;
+		}
+	}
+	
+	ol{
+		margin-left: 30px;
+		
+		li{
+			list-style: decimal;
+		}
+	}
+	
+	h1, h2, h3, h4{
+		
+		& + figure,
+		& + ul,
+		& + ol,
+		& + table,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + p{
+			margin-top: 0;
+		}
+	}
+} 

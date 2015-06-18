@@ -1,0 +1,43 @@
+.pageFooter{
+	@include bg($blue);
+	
+	.inner{
+		padding-top: 68px;
+		padding-bottom: 56px;
+	
+		&:before{
+			content: '';
+			@include abs(17px, 36px);
+			width: 105px;
+			height: 67px;
+			@include bg('logo-footer.png');
+		}
+	}
+	
+	.menu{
+		text-align: center;
+		
+		li{
+			display: inline-block;
+			margin: 0 2.8%;
+		}
+		
+		a{
+			color: #8f8f98;
+			font-size: 16px;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.copy{
+		@include absR(3.3%, 68px);
+		font-size: 12px;
+		font-size: 1.2rem;
+		color: #8f8f98;
+	}
+}

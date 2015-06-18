@@ -1,0 +1,100 @@
+.homeCategories{
+	@include bg($blue);
+	position: relative;
+	
+	&:after,
+	&:before{
+		content: '';
+		@include abs(0, 0);
+		width: 100%;
+		height: 6px;
+		box-shadow: 0 -1px 1px rgba(13, 25, 23, .5);
+		background: #e5c480;
+		background: -moz-linear-gradient(top,  #e5c480 0%, #ba9038 66%, #e5c480 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5c480), color-stop(66%,#ba9038), color-stop(100%,#e5c480));
+		background: -webkit-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+		background: -o-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+		background: -ms-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+		background: linear-gradient(to bottom,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c480', endColorstr='#e5c480',GradientType=0 );
+	}
+	
+	&:after{
+		top: auto;
+		bottom: 0;
+	}
+	
+	.inner{
+		text-align: center;
+		padding-top: 62px;
+		padding-bottom: 66px;
+	}
+	
+	.category{
+		display: inline-block;
+		width: 33.33 - 1.6%;
+		max-width: 361px;
+		height: 331px;
+		margin: 0 .8%;
+		background-size: cover;
+		background-position: 50% 50%;
+		padding-top: 266px;
+		position: relative;
+		
+		&:before{
+			content: '';
+			width: 100%;
+			height: 331 - 266 - 53px;
+			@include bg(rgba(131, 126, 126, .44));
+			@include absB(0, 0);
+			z-index: 8;
+		}
+		
+		&:after{
+			content: '';
+			width: 100%;
+			height: 100%;
+			@include bg(rgba(26, 49, 98, .62));
+			@include absB(0, 0);
+			z-index: 7;
+			transition: opacity .2s;
+		}
+		
+		span{
+			display: block;
+			width: 100%;
+			height: 53px;
+			@include bg(rgba(18, 33, 66, .5));
+			position: relative;
+			z-index: 9;
+		}
+		
+		i{
+			position: relative;
+			z-index: 10;
+			font-size: 24px;
+			font-size: 2.4rem;
+			font-style: normal;
+			color: $white;
+			text-transform: uppercase;
+			line-height: 53px;
+			
+			&:before{
+				content: '';
+				width: 36px;
+				height: 32px;
+				@include bg('jewel.png');
+				@include abs(-19px, 50%);
+				z-index: -1;
+				margin-top: -16px;
+			}
+		}
+		
+		&:hover{
+			
+			&:after{
+				opacity: 0;
+			}
+		}
+	}
+}

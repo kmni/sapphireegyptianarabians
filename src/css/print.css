@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after {
+  background: transparent none !important; }
+
+html, body {
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  background-color: #fff !important; }
+
+form,
+aside,
+footer,
+nav,
+.homeTop,
+.homeCategories,
+.pageLogo,
+.horseList .horse .detail,
+.horseList .horse .more {
+  display: none; }
+
+.horseDetail .photos {
+  *zoom: 1;
+  margin-bottom: 20px; }
+  .horseDetail .photos:before, .horseDetail .photos:after {
+    content: "";
+    display: table; }
+  .horseDetail .photos:after {
+    clear: both; }
+.horseDetail .owl-item {
+  float: left;
+  width: 30% !important;
+  margin-right: 3.3%; }
+  .horseDetail .owl-item img {
+    max-width: 100%; }
+.horseDetail .pedigree table {
+  width: 100%; }
+.horseDetail .pedigree .horse {
+  display: none; }
+
+.owl-wrapper {
+  width: auto !important; }

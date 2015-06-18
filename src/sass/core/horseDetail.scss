@@ -1,0 +1,149 @@
+.horseDetail{
+	color: $white;
+	
+	.inner{
+		padding-top: 98px;
+		padding-bottom: 61px;
+	}
+	
+	.wrap{
+		margin: 0 auto;
+		max-width: 1105px;
+		@include bg($blue);
+	}
+	
+	.header,
+	.text{
+		padding-left: 65px;
+		padding-right: 65px;
+	}
+	
+	.photos{
+		@include clear();
+		background-size: cover;
+		background-position: 50% 50%;
+		padding: 50px 55px;
+		
+		.photo{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+		img{
+			display: block;
+			max-width: 100%;
+		}
+	}
+	
+	.header{
+		@include bg($darkblue);
+		padding-top: 15px;
+		padding-bottom: 15px;
+		
+		h1{
+			color: #f2ca75;
+			font-size: 24px;
+			font-size: 2.4rem;
+			text-transform: uppercase;
+		}
+		
+		h2{
+			font-size: 16px;
+			font-size: 1.6rem;
+		}
+	}
+	
+	.text{
+		padding-top: 50px;
+		padding-bottom: 105px;
+	}
+	
+	.pedigree{
+		padding-left: 65px;
+		padding-top: 90px;
+		padding-bottom: 90px;
+		text-transform: uppercase;
+		position: relative;
+		
+		$space: 12px;
+		
+		&:before{
+			content: '';
+			@include abs(0, 0);
+			width: 100%;
+			height: 6px;
+			box-shadow: 0 -1px 1px rgba(13, 25, 23, .5);
+			background: #e5c480;
+			background: -moz-linear-gradient(top,  #e5c480 0%, #ba9038 66%, #e5c480 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5c480), color-stop(66%,#ba9038), color-stop(100%,#e5c480));
+			background: -webkit-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: -o-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: -ms-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: linear-gradient(to bottom,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c480', endColorstr='#e5c480',GradientType=0 );
+		}
+		
+		.box{
+			width: 100%;
+			overflow: auto;
+			position: relative;
+			padding-left: 12.3%;
+			
+			&:before{
+				content: '';
+				width: 100%;
+				height: 1px;
+				@include abs(0, 50%);
+				@include bg($lightblue);
+				margin-top: -$space / 2;
+			}
+		}
+		
+		table{
+			width: 100%;
+			
+			td{
+				vertical-align: middle;
+				font-size: 16px;
+				font-size: 1.6rem;
+				padding: 2px 23px;
+				white-space: nowrap;
+				text-transform: uppercase;
+				
+				&.small{
+					font-size: 14px;
+					font-size: 1.4rem;
+				}
+			}
+			
+			tr:nth-child(2n) td{
+				padding-bottom: $space;
+			}
+			
+			tr:nth-child(2n+1) td:nth-last-child(n+2){
+				padding-bottom: $space;
+			}
+		}
+		
+		.horse{
+			@include abs(0, 50%);
+			font-size: 16px;
+			font-size: 1.6rem;
+			line-height: 32px;
+			height: 32px;
+			margin-top: -16px - ($space / 2);
+			padding-left: 45px;
+			padding-right: 28px;
+			@include bg($blue);
+			text-transform: uppercase;
+			
+			&:before{
+				content: '';
+				@include abs(0, 0);
+				width: 36px;
+				height: 32px;
+				@include bg('jewel.png');
+			}
+		}
+	}
+}

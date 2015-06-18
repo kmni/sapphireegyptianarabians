@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after{
+	background: transparent none !important;
+}
+
+html, body{
+	font-family: Arial, Helvetica, Tahoma, sans-serif;
+	background-color: #fff !important;
+}
+
+form,
+aside,
+footer,
+nav,
+.homeTop,
+.homeCategories,
+.pageLogo,
+.horseList .horse .detail,
+.horseList .horse .more{
+	display: none;
+}
+
+.horseDetail{
+	
+	.photos{
+		@include clear();
+		margin-bottom: 20px;
+	}
+	
+	.owl-item{
+		float: left;
+		width: 30% !important;
+		margin-right: 3.3%;
+		
+		img{
+			max-width: 100%;
+		}
+	}
+	
+	.pedigree{
+		
+		table{
+			width: 100%;
+		}
+		
+		.horse{
+			display: none;
+		}
+	}
+}
+
+.owl-wrapper{
+	width: auto !important;
+}

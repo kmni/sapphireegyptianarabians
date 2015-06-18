@@ -1,0 +1,66 @@
+.pageHeader{
+	@include bg($blue);
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	
+	&:after{
+		content: '';
+		@include absB(0, -7px);
+		width: 100%;
+		height: 2px;
+		@include bg('dots.png', 0 0, repeat-x);
+	}
+	
+	.inner{
+		height: 83px;
+	}
+}
+
+.pageLogo{
+	@include abs(7px, 6px);
+	
+	img{
+		display: block;
+	}
+}
+
+.pageMenu{
+	text-align: center;
+	
+	ul{
+		
+	}
+	
+	li{
+		display: inline-block;
+	}
+	
+	a{
+		display: inline-block;
+		color: $white;
+		font-size: 1.6rem;
+		font-size: 16px;
+		text-transform: uppercase;
+		line-height: 83px;
+		padding: 0 18px;
+		margin: 0 20px;
+		transition: background-color .2s;
+		
+		&:hover,
+		&.active{
+			@include bg($lightblue);
+		}
+	}
+}
+
+.menuOpener{
+	display: none;
+	@include absR(15px, 15px);
+	width: 53px;
+	height: 53px;
+	@include bg('ico-hamburger.png', 50% 50%);
+}

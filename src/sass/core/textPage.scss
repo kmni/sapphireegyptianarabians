@@ -1,0 +1,36 @@
+.textPage{
+	
+	.inner{
+		padding-top: 55px;
+		padding-bottom: 129px;
+	}
+	
+	.wrap{
+		max-width: 1105px;
+		margin: 0 auto;
+		padding: 58px 15px 50px;
+		@include bg(#fdfdfd);
+		position: relative;
+		
+		&:before{
+			content: '';
+			@include absB(0, 0);
+			width: 100%;
+			height: 6px;
+			box-shadow: 0 -1px 1px rgba(13, 25, 23, .5);
+			background: #e5c480;
+			background: -moz-linear-gradient(top,  #e5c480 0%, #ba9038 66%, #e5c480 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5c480), color-stop(66%,#ba9038), color-stop(100%,#e5c480));
+			background: -webkit-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: -o-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: -ms-linear-gradient(top,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			background: linear-gradient(to bottom,  #e5c480 0%,#ba9038 66%,#e5c480 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c480', endColorstr='#e5c480',GradientType=0 );
+		}
+	}
+	
+	.innerWrap{
+		max-width: 720px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,65 @@
+.homeTop{
+	margin-top: 82px;
+	
+	.inner{
+		padding-top: 164px;
+		padding-bottom: 80px;
+	}
+	
+	h1{
+		height: 56px;
+		width: 100%;
+		@include bg(rgba(18, 33, 66, .2));
+		position: relative;
+		
+		&:before{
+			content: '';
+			@include abs(50%, -164px);
+			margin-left: -164px;
+			width: 328px;
+			height: 210px;
+			@include bg('logo.png');
+			background-size: contain;
+		}
+		
+		span{
+			@include hidden();
+		}
+	}
+	
+	.images{
+		@include clear();
+		margin-top: 10px;
+		position: relative;
+		
+		&:before{
+			content: '';
+			width: 100%;
+			height: 58px;
+			@include absB(0, -41px);
+			@include bg('shadow.png', 50% 0, repeat-x);
+		}
+		
+		.left,
+		.middle,
+		.right{
+			height: 491px;
+			float: left;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+		
+		.left,
+		.right{
+			width: 36.15%;
+		}
+		
+		.middle{
+			width: 100% - 2 * 36.15;
+		}
+		
+		.left{ @include bgImg('home1.jpg'); }
+		.middle{ @include bgImg('home2.jpg'); }
+		.right{ @include bgImg('home3.jpg'); }
+	}
+}

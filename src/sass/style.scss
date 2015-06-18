@@ -1,0 +1,24 @@
+@import 'core/import';
+
+@import 'plugins/reset';
+@import 'plugins/owl.carousel';
+@import 'plugins/owl.transitions';
+
+//import helpers
+@import 'helpers/helpers';
+
+//import screen declarations
+@import 'core/common';
+@import 'core/main';
+@import 'core/header';
+@import 'core/homeTop';
+@import 'core/homeCategories';
+@import 'core/homeAbout';
+@import 'core/footer';
+@import 'core/horseList';
+@import 'core/horseDetail';
+@import 'core/formatted';
+@import 'core/textPage';
+
+//import responsive declarations
+@import 'responsive/responsive';
